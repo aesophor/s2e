@@ -86,6 +86,12 @@ message(STATUS "Found libvmi ${VMI_PACKAGE_VERSION}")
 find_package(LIBCOROUTINE REQUIRED)
 message(STATUS "Found libcoroutine ${LIBCOROUTINE_PACKAGE_VERSION}")
 
+find_package(Python COMPONENTS Interpreter Development REQUIRED)
+message(STATUS "Found Python ${PYTHON_PACKAGE_VERSION}")
+
+find_package(pybind11 REQUIRED)
+message(STATUS "Found pybind11")
+
 if(WITH_TARGET MATCHES "s2e")
     # TODO: look at libcpu compile options to figure this out
     find_package(LIBS2ECORE REQUIRED)

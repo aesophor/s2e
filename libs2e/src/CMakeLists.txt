@@ -64,7 +64,7 @@ if(WITH_TARGET MATCHES "s2e")
                      boost_regex)
 endif()
 
-set(LIBS ${LIBS} ${LIBCOROUTINE_LIBRARY_DIR}/libcoroutine.a ${FSIGCXX_LIBRARY_DIR}/libfsigc++.a ${CAPSTONE_LIB_DIR}/libcapstone.a pthread glib-2.0 bsd)
+set(LIBS ${LIBS} ${LIBCOROUTINE_LIBRARY_DIR}/libcoroutine.a ${FSIGCXX_LIBRARY_DIR}/libfsigc++.a ${CAPSTONE_LIB_DIR}/libcapstone.a pthread glib-2.0 bsd pybind11::embed)
 
 target_link_libraries(tests2e PUBLIC ${LIBCOROUTINE_LIBRARY_DIR}/libcoroutine.a pthread glib-2.0)
 target_link_libraries(s2e ${LIBS})
